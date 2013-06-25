@@ -42,6 +42,19 @@ Required parameters are always seperate arguments, optional parameters take the 
 
 For more information on functions, parameters etc please view the source for the class you wish to use and consult Amazon's own documentation.
 
+## API endpoint versions
+
+Periodically Amazon updates their API endpoint URIs and version numbers. These can be updated in each class:
+
+```php
+class Sellers extends AmazonMWS {
+
+	private $api_endpoint = '/Sellers/2011-07-01';
+	private $api_version = '2011-07-01';
+
+	...
+```	
+
 ### ToDo
 
 1. Add option to return SimpleXML object or DocDocument object rather than just raw XML
