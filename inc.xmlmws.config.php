@@ -7,6 +7,8 @@
     define('MERCHANT_ID', 'YOUR MERCHANT ID');
     define('MARKETPLACE_ID', 'THE MARKETPLACE ID YOU WISH TO USE');
     define('APPLICATION_USER_AGENT', "Company/Application+version (Language=PHP; phpversion=". phpversion() .";)");
-    define('SERVICE_URL', "mws.amazonservices.co.uk"); // CHANGE THIS TO ONE YOUR ACCOUNT IS ASSOCIATED WITH
+    define('MERCHANT_IDENTIFIER', "YOUR MERCHANT IDENTIFIER"); // Found under settings in sellercentral
+	define('SERVICE_URL', "mws.amazonservices.co.uk"); // CHANGE THIS TO ONE YOUR ACCOUNT IS ASSOCIATED WITH
+	
 
 ?>
