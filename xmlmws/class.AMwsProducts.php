@@ -45,7 +45,7 @@
 			$params = Array();
 			$params['MarketPlaceId'] = $marketPlaceId;
 			foreach($asinList as $index => $al){
-				$params['ASINList.'.$index] = $al;
+				$params['ASINList.'.($index+1)] = $al;
 			}
 			
 			$uri = parent::createMWSUri('GetMatchingProduct', $this->api_endpoint, $this->api_version, $params);
@@ -69,7 +69,7 @@
 			$params['MarketPlaceId'] = $marketPlaceId;
 			$params['IdType'] = $idType;
 			foreach($idList as $index => $id){
-				$params['IdList.Id.'.$index] = $id;
+				$params['IdList.Id.'.($index+1)] = $id;
 			}
 			
 			$uri = parent::createMWSUri('GetMatchingProductForId', $this->api_endpoint, $this->api_version, $params);
@@ -91,7 +91,7 @@
 			$params = Array();
 			$params['MarketPlaceId'] = $marketPlaceId;
 			foreach($sellerSKUList as $index => $sku){
-				$params['SellerSKUList.SellerSKU.'.$index] = $sku;
+				$params['SellerSKUList.SellerSKU.'.($index+1)] = $sku;
 			}
 			
 			$uri = parent::createMWSUri('GetCompetitivePricingForSKU', $this->api_endpoint, $this->api_version, $params);
@@ -113,7 +113,7 @@
 			$params = Array();
 			$params['MarketPlaceId'] = $marketPlaceId;
 			foreach($asinList as $index => $al){
-				$params['ASINList.ASIN.'.$index] = $al;
+				$params['ASINList.ASIN.'.($index+1)] = $al;
 			}
 			
 			$uri = parent::createMWSUri('GetCompetitivePricingForASIN', $this->api_endpoint, $this->api_version, $params);
@@ -138,7 +138,7 @@
 			$params = Array();
 			$params['MarketPlaceId'] = $marketPlaceId;
 			foreach($sellerSKUList as $index => $sku){
-				$params['SellerSKUList.SellerSKU.'.$index] = $sku;
+				$params['SellerSKUList.SellerSKU.'.($index+1)] = $sku;
 			}
 			if(isset($options['ItemCondition'])){ $params['ItemCondition'] = $options['ItemCondition']; }
 			if(isset($options['ExcludeMe'])){ $params['ExcludeMe'] = $options['ExcludeMe']; }
@@ -164,7 +164,7 @@
 			$params = Array();
 			$params['MarketPlaceId'] = $marketPlaceId;
 			foreach($asinList as $index => $al){
-				$params['ASINList.ASIN.'.$index] = $al;
+				$params['ASINList.ASIN.'.($index+1)] = $al;
 			}
 			if(isset($options['ItemCondition'])){ $params['ItemCondition'] = $options['ItemCondition']; }
 			
@@ -189,7 +189,7 @@
 			$params = Array();
 			$params['MarketPlaceId'] = $marketPlaceId;
 			foreach($sellerSKUList as $index => $sku){
-				$params['SellerSKUList.SellerSKU.'.$index] = $sku;
+				$params['SellerSKUList.SellerSKU.'.($index+1)] = $sku;
 			}
 			if(isset($options['ItemCondition'])){ $params['ItemCondition'] = $options['ItemCondition']; }
 			
@@ -214,7 +214,7 @@
 			$params = Array();
 			$params['MarketPlaceId'] = $marketPlaceId;
 			foreach($asinList as $index => $al){
-				$params['ASINList.ASIN.'.$index] = $al;
+				$params['ASINList.ASIN.'.($index+1)] = $al;
 			}
 			if(isset($options['ItemCondition'])){ $params['ItemCondition'] = $options['ItemCondition']; }
 			

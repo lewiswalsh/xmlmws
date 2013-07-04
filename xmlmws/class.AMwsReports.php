@@ -31,7 +31,7 @@
 			
 			if(isset($options['MarketplaceIdList'])){ 
 				foreach($options['MarketplaceIdList'] as $index => $mpi){
-					$params['MarketplaceIdList.Id.'.$index] = $mpi;
+					$params['MarketplaceIdList.Id.'.($index+1)] = $mpi;
 				}
 			}
 			
@@ -66,13 +66,13 @@
 				
 				if(isset($options['ReportTypeList'])){ 
 					foreach($options['ReportTypeList'] as $index => $rt){
-						$params['ReportTypeList.Type.'.$index] = $rt;
+						$params['ReportTypeList.Type.'.($index+1)] = $rt;
 					}
 				}
 				
 				if(isset($options['ReportProcessingStatusList'])){ 
 					foreach($options['ReportProcessingStatusList'] as $index => $rps){
-						$params['ReportProcessingStatusList.Status.'.$index] = $rps;
+						$params['ReportProcessingStatusList.Status.'.($index+1)] = $rps;
 					}
 				}
 				
@@ -125,13 +125,13 @@
 
 				if(isset($options['ReportTypeList'])){ 
 					foreach($options['ReportTypeList'] as $index => $rt){
-						$params['ReportTypeList.Type.'.$index] = $rt;
+						$params['ReportTypeList.Type.'.($index+1)] = $rt;
 					}
 				}
 				
 				if(isset($options['ReportProcessingStatusList'])){ 
 					foreach($options['ReportProcessingStatusList'] as $index => $rps){
-						$params['ReportProcessingStatusList.Status.'.$index] = $rps;
+						$params['ReportProcessingStatusList.Status.'.($index+1)] = $rps;
 					}
 				}
 				
@@ -167,19 +167,19 @@
 				
 				if(isset($options['ReportRequestIdList'])){ 
 					foreach($options['ReportRequestIdList'] as $index => $rri){
-						$params['ReportRequestIdList.Id.'.$index] = $rri;
+						$params['ReportRequestIdList.Id.'.($index+1)] = $rri;
 					}
 				}
 
 				if(isset($options['ReportTypeList'])){ 
 					foreach($options['ReportTypeList'] as $index => $rt){
-						$params['ReportTypeList.Type.'.$index] = $rt;
+						$params['ReportTypeList.Type.'.($index+1)] = $rt;
 					}
 				}
 				
 				if(isset($options['ReportProcessingStatusList'])){ 
 					foreach($options['ReportProcessingStatusList'] as $index => $rps){
-						$params['ReportProcessingStatusList.Status.'.$index] = $rps;
+						$params['ReportProcessingStatusList.Status.'.($index+1)] = $rps;
 					}
 				}
 				
@@ -216,7 +216,7 @@
 				
 				if(isset($options['ReportTypeList'])){ 
 					foreach($options['ReportTypeList'] as $index => $rt){
-						$params['ReportTypeList.Type.'.$index] = $rt;
+						$params['ReportTypeList.Type.'.($index+1)] = $rt;
 					}
 				}
 				
@@ -227,7 +227,7 @@
 				
 				if(isset($options['ReportRequestIdList'])){ 
 					foreach($options['ReportRequestIdList'] as $index => $rri){
-						$params['ReportRequestIdList.Id.'.$index] = $rri;
+						$params['ReportRequestIdList.Id.'.($index+1)] = $rri;
 					}
 				}
 				
@@ -276,7 +276,7 @@
 				
 				if(isset($options['ReportTypeList'])){ 
 					foreach($options['ReportTypeList'] as $index => $rt){
-						$params['ReportTypeList.Type.'.$index] = $rt;
+						$params['ReportTypeList.Type.'.($index+1)] = $rt;
 					}
 				}
 				
@@ -351,7 +351,7 @@
 				
 				if(isset($options['ReportTypeList'])){ 
 					foreach($options['ReportTypeList'] as $index => $rt){
-						$params['ReportTypeList.Type.'.$index] = $rt;
+						$params['ReportTypeList.Type.'.($index+1)] = $rt;
 					}
 				}
 			
@@ -379,7 +379,7 @@
 				
 				if(isset($options['ReportTypeList'])){ 
 					foreach($options['ReportTypeList'] as $index => $rt){
-						$params['ReportTypeList.Type.'.$index] = $rt;
+						$params['ReportTypeList.Type.'.($index+1)] = $rt;
 					}
 				}
 			
@@ -406,7 +406,7 @@
 		public function UpdateReportAcknowledgements($reportIdList, $options=false){
 			$params = Array();
 			foreach($reportIdList as $index => $id){
-				$params['ReportIdList.Id.'.$index] = $id;
+				$params['ReportIdList.Id.'.($index+1)] = $id;
 			}
 			
 			if(isset($options['Acknowledged'])){ $params['Acknowledged'] = $options['Acknowledged']; }

@@ -25,7 +25,7 @@
 			$params['FeedType'] = $feedType;
 			if(isset($options['MarkplaceIdList'])){ 
 				foreach($options['MarkplaceIdList'] as $index => $mid){
-					$params['MarkplaceIdList.Id.'.$index] = $mid;
+					$params['MarkplaceIdList.Id.'.($index+1)] = $mid;
 				}
 			}
 			if(isset($options['PurgeAndReplace'])){ $params['PurgeAndReplace'] = 'true'; }
@@ -54,18 +54,18 @@
 				$params = Array();
 				if(isset($options['FeedSubmissionIdList'])){ 
 					foreach($options['FeedSubmissionIdList'] as $index => $fsid){
-						$params['FeedSubmissionIdList.Id.'.$index] = $fsid;
+						$params['FeedSubmissionIdList.Id.'.($index+1)] = $fsid;
 					}
 				}
 				if(isset($options['MaxCount'])){ $params['MaxCount'] = $options['MaxCount']; }
 				if(isset($options['FeedTypeList'])){ 
 					foreach($options['FeedTypeList'] as $index => $ft){
-						$params['FeedTypeList.Type.'.$index] = $ft;
+						$params['FeedTypeList.Type.'.($index+1)] = $ft;
 					}
 				}
 				if(isset($options['FeedProcessingStatusList'])){ 
 					foreach($options['FeedProcessingStatusList'] as $index => $fps){
-						$params['FeedProcessingStatusList.Status.'.$index] = $ps;
+						$params['FeedProcessingStatusList.Status.'.($index+1)] = $ps;
 					}
 				}
 				if(isset($options['SubmittedFromDate'])){ $params['SubmittedFromDate'] = (is_numeric($options['SubmittedFromDate']) ? date(parent::php_date_format, $options['SubmittedFromDate']) : $options['SubmittedFromDate']);  } // Converts if unixtime provided
@@ -115,12 +115,12 @@
 				$params = Array();
 				if(isset($options['feedTypeList'])){ 
 					foreach($options['feedTypeList'] as $index => $ft){
-						$params['FeedTypeList.Type.'.$index] = $ft;
+						$params['FeedTypeList.Type.'.($index+1)] = $ft;
 					}
 				}
 				if(isset($options['feedProcessingStatusList'])){ 
 					foreach($options['feedProcessingStatusList'] as $index => $fps){
-						$params['FeedProcessingStatusList.Status.'.$index] = $ps;
+						$params['FeedProcessingStatusList.Status.'.($index+1)] = $ps;
 					}
 				}
 				if(isset($options['SubmittedFromDate'])){ $params['SubmittedFromDate'] = (is_numeric($options['SubmittedFromDate']) ? date(parent::php_date_format, $options['SubmittedFromDate']) : $options['SubmittedFromDate']);  } // Converts if unixtime provided
@@ -152,12 +152,12 @@
 				$params = Array();
 				if(isset($options['FeedTypeList'])){ 
 					foreach($feedTypeList as $index => $ft){
-						$params['FeedTypeList.Type.'.$index] = $ft;
+						$params['FeedTypeList.Type.'.($index+1)] = $ft;
 					}
 				}
 				if(isset($options['FeedProcessingStatusList'])){ 
 					foreach($feedProcessingStatusList as $index => $fps){
-						$params['FeedProcessingStatusList.Status.'.$index] = $ps;
+						$params['FeedProcessingStatusList.Status.'.($index+1)] = $ps;
 					}
 				}
 				if(isset($options['SubmittedFromDate'])){ $params['SubmittedFromDate'] = (is_numeric($options['SubmittedFromDate']) ? date(parent::php_date_format, $options['SubmittedFromDate']) : $options['SubmittedFromDate']);  } // Converts if unixtime provided

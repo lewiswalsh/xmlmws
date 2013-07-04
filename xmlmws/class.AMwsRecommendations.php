@@ -43,7 +43,7 @@
 			$params['RecommendationCategory'] = $recommendationCategory;
 			if(isset($options['CategoryQueryList'])){ 
 				foreach($options['CategoryQueryList'] as $index => $cq){
-					$params['CategoryQueryList.CategoryQuery.'.$index] = $cq;
+					$params['CategoryQueryList.CategoryQuery.'.($index+1)] = $cq;
 				}
 			}
 			

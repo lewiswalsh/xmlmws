@@ -32,7 +32,7 @@
 		public function ListOrders($marketPlaceId, $options=false){
 			$params = Array();
 			foreach($marketPlaceId as $index => $mpi){
-				$params['MarketPlaceId.Id.'.$index] = $mpi;
+				$params['MarketPlaceId.Id.'.($index+1)] = $mpi;
 			}
 			
 			if(isset($options['CreatedAfter'])){ $params['CreatedAfter'] = (is_numeric($options['CreatedAfter']) ? date(parent::php_date_format, $options['CreatedAfter']) : $options['CreatedAfter']);  } // Converts if unixtime provided
@@ -43,19 +43,19 @@
 
 			if(isset($options['OrderStatus'])){  
 				foreach($options['OrderStatus'] as $index => $os){
-					$params['OrderStatus.Status.'.$index] = $os;
+					$params['OrderStatus.Status.'.($index+1)] = $os;
 				}
 			}
 			
 			if(isset($options['FulfillmentChannel'])){  
 				foreach($options['FulfillmentChannel'] as $index => $fc){
-					$params['FulfillmentChannel.Channel.'.$index] = $fc;
+					$params['FulfillmentChannel.Channel.'.($index+1)] = $fc;
 				}
 			}
 			
 			if(isset($options['PaymentMethod'])){  
 				foreach($options['PaymentMethod'] as $index => $pm){
-					$params['PaymentMethod.'.$index] = $pm;
+					$params['PaymentMethod.'.($index+1)] = $pm;
 				}
 			}
 			
@@ -65,7 +65,7 @@
 			
 			if(isset($options['TFMShipmentStatus'])){  
 				foreach($options['TFMShipmentStatus'] as $index => $ts){
-					$params['TFMShipmentStatus.Status.'.$index] = $ts;
+					$params['TFMShipmentStatus.Status.'.($index+1)] = $ts;
 				}
 			}
 				
@@ -104,7 +104,7 @@
 		public function GetOrder($amazonOrderId){
 			$params = Array();
 			foreach($amazonOrderId as $index => $id){
-				$params['AmazonOrderId.Id.'.$index] = $id;
+				$params['AmazonOrderId.Id.'.($index+1)] = $id;
 			}
 			$uri = parent::createMWSUri('GetOrder', $this->api_endpoint, $this->api_version, $params);
 			return parent::mwsCurlRetrieve($uri);
