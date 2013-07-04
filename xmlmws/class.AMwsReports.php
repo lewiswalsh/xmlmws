@@ -60,7 +60,7 @@
 
 				if(isset($options['ReportRequestIdList'])){ 
 					foreach($options['ReportRequestIdList'] as $index => $rri){
-						$params['ReportRequestIdList.Id.'.$index] = $rri;
+						$params['ReportRequestIdList.Id.'.($index+1)] = $rri;
 					}
 				}
 				
