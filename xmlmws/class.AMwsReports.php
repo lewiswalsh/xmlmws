@@ -21,7 +21,7 @@
 		*	@options['MarketplaceIdList'] 		(array)			Indexed array of one or more marketplace IDs for the marketplaces you are registered to sell in.
 		*		
 		*/
-		public function RequestReport($reportType, $options){
+		public function RequestReport($reportType, $options=false){
 			$params = Array();
 			$params['ReportType'] = $reportType;
 			
