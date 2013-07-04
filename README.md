@@ -1,14 +1,12 @@
 # XMLMWS
 
-A set of classes to work with Amazons MWS service using PHP and XML. I built this for my own needs as I was unhappy with what was already out there.
-
-**This is very much in alpha at the moment though is considered working**
+A set of classes to work with Amazons MWS service using PHP and XML. I built this for my own needs as I was unhappy with what was already out there. I haven't included the fullfilment API's yet.
 
 ## Usage
 
 1. Include/require the class files, or use (or generate) the optional PHAR file.
 2. Update the config file `inc.xmlmws.config.php` and ensure your application includes it.
-3. Instantiate an object of the class referring the part of the API you wish to use.
+3. Instantiate an object of the class referring to the part of the API you wish to use.
 4. Use your object to call the function needed, passing in any XML or parameters
 
 A good test to make sure all is working is to try the GetServiceStatus() function:
