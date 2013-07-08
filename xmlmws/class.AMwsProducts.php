@@ -4,10 +4,10 @@
 
 	class Products extends AmazonMWS {
 	
-		private $api_endpoint = 'Products/2011-10-01';
+		private $api_endpoint = '/Products/2011-10-01';
 		private $api_version = '2011-10-01';
 		
-		
+
 		/***************************************************************
 		*	Function ListMatchingProducts
 		*	
@@ -263,6 +263,7 @@
 		}
 		
 		
+	
 		
 		/***************************************************************
 		*	Function GetServiceStatus
