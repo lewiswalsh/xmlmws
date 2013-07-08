@@ -21,7 +21,7 @@
 		*/
 		public function ListMatchingProducts($marketPlaceId, $query, $options=false){
 			$params = Array();
-			$params['MarketPlaceId'] = $marketPlaceId;
+			$params['MarketplaceId'] = $marketPlaceId;
 			$params['Query'] = $query;
 			
 			if(isset($options['QueryContextId'])){ $params['QueryContextId'] = $options['QueryContextId']; }
@@ -43,7 +43,7 @@
 		*/
 		public function GetMatchingProduct($marketPlaceId, $asinList){
 			$params = Array();
-			$params['MarketPlaceId'] = $marketPlaceId;
+			$params['MarketplaceId'] = $marketPlaceId;
 			foreach($asinList as $index => $al){
 				$params['ASINList.'.($index+1)] = $al;
 			}
@@ -66,7 +66,7 @@
 		*/
 		public function GetMatchingProductForId($marketPlaceId, $idType, $idList){
 			$params = Array();
-			$params['MarketPlaceId'] = $marketPlaceId;
+			$params['MarketplaceId'] = $marketPlaceId;
 			$params['IdType'] = $idType;
 			foreach($idList as $index => $id){
 				$params['IdList.Id.'.($index+1)] = $id;
@@ -89,7 +89,7 @@
 		*/
 		public function GetCompetitivePricingForSKU($marketPlaceId, $sellerSKUList){
 			$params = Array();
-			$params['MarketPlaceId'] = $marketPlaceId;
+			$params['MarketplaceId'] = $marketPlaceId;
 			foreach($sellerSKUList as $index => $sku){
 				$params['SellerSKUList.SellerSKU.'.($index+1)] = $sku;
 			}
@@ -111,7 +111,7 @@
 		*/
 		public function GetCompetitivePricingForASIN($marketPlaceId, $asinList){
 			$params = Array();
-			$params['MarketPlaceId'] = $marketPlaceId;
+			$params['MarketplaceId'] = $marketPlaceId;
 			foreach($asinList as $index => $al){
 				$params['ASINList.ASIN.'.($index+1)] = $al;
 			}
@@ -136,7 +136,7 @@
 		*/
 		public function GetLowestOfferListingsForSKU($marketPlaceId, $sellerSKUList, $options=false){
 			$params = Array();
-			$params['MarketPlaceId'] = $marketPlaceId;
+			$params['MarketplaceId'] = $marketPlaceId;
 			foreach($sellerSKUList as $index => $sku){
 				$params['SellerSKUList.SellerSKU.'.($index+1)] = $sku;
 			}
@@ -162,7 +162,7 @@
 		*/
 		public function GetLowestOfferListingsForASIN($marketPlaceId, $asinList, $options=false){
 			$params = Array();
-			$params['MarketPlaceId'] = $marketPlaceId;
+			$params['MarketplaceId'] = $marketPlaceId;
 			foreach($asinList as $index => $al){
 				$params['ASINList.ASIN.'.($index+1)] = $al;
 			}
@@ -187,7 +187,7 @@
 		*/
 		public function GetMyPriceForSKU($marketPlaceId, $sellerSKUList, $options=false){
 			$params = Array();
-			$params['MarketPlaceId'] = $marketPlaceId;
+			$params['MarketplaceId'] = $marketPlaceId;
 			foreach($sellerSKUList as $index => $sku){
 				$params['SellerSKUList.SellerSKU.'.($index+1)] = $sku;
 			}
@@ -212,7 +212,7 @@
 		*/
 		public function GetMyPriceForASIN($marketPlaceId, $asinList, $options=false){
 			$params = Array();
-			$params['MarketPlaceId'] = $marketPlaceId;
+			$params['MarketplaceId'] = $marketPlaceId;
 			foreach($asinList as $index => $al){
 				$params['ASINList.ASIN.'.($index+1)] = $al;
 			}
@@ -235,7 +235,7 @@
 		*/
 		public function GetProductCategoriesForSKU($marketPlaceId, $sellerSKU){
 			$params = Array();
-			$params['MarketPlaceId'] = $marketPlaceId;
+			$params['MarketplaceId'] = $marketPlaceId;
 			$params['SellerSKU'] = $sellerSKU;
 			
 			$uri = parent::createMWSUri('GetProductCategoriesForSKU', $this->api_endpoint, $this->api_version, $params);
@@ -255,7 +255,7 @@
 		*/
 		public function GetProductCategoriesForASIN($marketPlaceId, $asin){
 			$params = Array();
-			$params['MarketPlaceId'] = $marketPlaceId;
+			$params['MarketplaceId'] = $marketPlaceId;
 			$params['ASIN'] = $asin;
 			
 			$uri = parent::createMWSUri('GetProductCategoriesForASIN', $this->api_endpoint, $this->api_version, $params);
